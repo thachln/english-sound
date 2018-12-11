@@ -16,7 +16,7 @@ public class CalculatorApplication{
 			}
 		};
 		MyBigNumber myBigNumber = new MyBigNumber(iReceiver);
-		String kq = myBigNumber.sum("56465", "5465456");
+		String kq = myBigNumber.sum(args[0], args[1]);
 		System.out.println(kq);
 	}
 }
