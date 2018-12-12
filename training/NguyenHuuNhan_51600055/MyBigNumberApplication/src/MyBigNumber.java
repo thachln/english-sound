@@ -1,3 +1,4 @@
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,24 +32,6 @@ public class MyBigNumber {
         Matcher m = p.matcher(s1);
         String c;
         int idx;
-        if (m.find()) {
-            c = m.group();
-            idx = m.start();
-            this.ireceiver.receive("NumberFormatException(\"Loi o tham so s1 tai vi tri "
-                    + idx + ": " + c + "\")");
-            throw new NumberFormatException("\"Loi o tham so s1 tai vi tri "
-                    + idx + ": " + c + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException   
-        }
-        m = p.matcher(s2);
-        if (m.find()) {
-            c = m.group();
-            idx = m.start();
-            this.ireceiver.receive("NumberFormatException(\"Loi o tham so s2 tai vi tri "
-                    + idx + ": " + c + "\")");
-            throw new NumberFormatException("\"Loi o tham so s2 tai vi tri "
-                    + idx + ": " + c + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException      
-        }
-
         String result = "";
         String direction = "";
         int length1 = s1.length();// do dai chuoi thu 1
@@ -59,6 +42,37 @@ public class MyBigNumber {
         char c1;// kí tự c1 dùng để lấy kí tự cuối cùng của chuỗi s1
         char c2;// kí tự c2 dùng để lấy kí tự cuối cùng của chuỗi s2
         int tong = 0;// Khởi tạo biến tổng = 0 để cộng 2 kí tự cuối cùng lại với nhau
+        
+        if (m.find()) {
+            c = m.group();
+            idx = m.start();
+
+            if ("-".equals(c) && idx == 0) {
+                this.ireceiver.receive("NumberFormatException(\"Chua ho tro so am s1: "
+                        + s1 + "\")");
+                throw new NumberFormatException("\"Chua ho tro so am s1: "
+                        + s1 + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
+            }
+            this.ireceiver.receive("NumberFormatException(\"Loi o tham so s1 tai vi tri "
+                    + idx + ": " + c + "\")");
+            throw new NumberFormatException("\"Loi o tham so s1 tai vi tri "
+                    + idx + ": " + c + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException   
+        }
+        m = p.matcher(s2);
+        if (m.find()) {
+            c = m.group();
+            idx = m.start();
+            if ("-".equals(c) && idx == 0) {
+                this.ireceiver.receive("NumberFormatException(\"Chua ho tro so am s1: "
+                        + s1 + "\")");
+                throw new NumberFormatException("\"Chua ho tro so am s1: "
+                        + s1 + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
+            }
+            this.ireceiver.receive("NumberFormatException(\"Loi o tham so s2 tai vi tri "
+                    + idx + ": " + c + "\")");
+            throw new NumberFormatException("\"Loi o tham so s2 tai vi tri "
+                    + idx + ": " + c + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException      
+        }
 
         // Lặp từ 0 đến max lần
         for (int i = 0; i < ((length1 > length2) ? length1 : length2); i++) {
