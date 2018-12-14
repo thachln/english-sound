@@ -17,7 +17,7 @@ public class MyFrame extends javax.swing.JFrame {
         initComponents();
         myInit();
     }
-    
+
     private void myInit() {
         ketqua.setEditable(false);
     }
@@ -133,7 +133,12 @@ public class MyFrame extends javax.swing.JFrame {
         MyBigNumber myBigNumber = new MyBigNumber(iReceiver);
         String soA = soa.getText();
         String soB = sob.getText();
-        String kq = myBigNumber.sum(soA, soB);
+        String kq = "";
+        try {
+            kq = myBigNumber.sum(soA, soB);
+        } catch (NumberFormatException e) {
+            
+        }
 
         ketqua.append("\n Ket qua : " + kq);
     }//GEN-LAST:event_jButton1ActionPerformed
