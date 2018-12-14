@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MyBigNumber.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;MyBigNumberApplication&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">MyBigNumber.java</span></div><h1>MyBigNumber.java</h1><pre class="source lang-java linenums">
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Tác giả: Nguyễn Hữu Nhân. Credit : Nguyễn Châu Thảo Quân Dessription. Class
+ * MyBigNumber là lớp để Cộng 2 số lớn bằng 2 chuỗi. Hàm sum trong Class
+ * MyBigNumber là hàm để thực hiện phép cộng 2 chuỗi số
+ */
+public class MyBigNumber {
+
+    private IReceiver ireceiver;
+
+<span class="fc" id="L14">    public MyBigNumber(final IReceiver ireceiver) {</span>
+<span class="fc" id="L15">        this.ireceiver = ireceiver;</span>
+<span class="fc" id="L16">    }</span>
+
+    /**
+     * Để thực hiện phép cộng, ta cần 2 chuỗi làm tham số cho hàm sum trong đó:
+     * 2 chuỗi này đều chỉ chứa các kí số từ '0' đến '9'.
+     * &lt;br/&gt;
+     *
+     * @param s1 chuỗi số thứ nhất.
+     * @param s2 chuỗi số thứ hai.
+     * @return chuỗi có giá trị là tổng của hai số s1 và s2.
+     */
+    public String sum(final String s1, final String s2) {
+        // Buoc 1: lay do dai 2 chuoi
+        // Phan khai bao
+
+<span class="fc" id="L31">        Pattern p = Pattern.compile(&quot;\\D&quot;);</span>
+<span class="fc" id="L32">        Matcher m = p.matcher(s1);</span>
+        String c;
+        int idx;
+<span class="fc" id="L35">        String result = &quot;&quot;;</span>
+<span class="fc" id="L36">        String direction = &quot;&quot;;</span>
+<span class="fc" id="L37">        int length1 = s1.length();// do dai chuoi thu 1</span>
+<span class="fc" id="L38">        int length2 = s2.length();// do dai chuoi thu 2</span>
+<span class="fc" id="L39">        int nho = 0;// Khởi tạo số nhớ = 0 để khi cộng sẽ có vài trường hợp lớn hơn 9</span>
+<span class="fc" id="L40">        int pos1 = 0;// Vị trí chuỗi s1</span>
+<span class="fc" id="L41">        int pos2 = 0;// Vị trí chuỗi s2</span>
+        char c1;// kí tự c1 dùng để lấy kí tự cuối cùng của chuỗi s1
+        char c2;// kí tự c2 dùng để lấy kí tự cuối cùng của chuỗi s2
+<span class="fc" id="L44">        int tong = 0;// Khởi tạo biến tổng = 0 để cộng 2 kí tự cuối cùng lại với nhau</span>
+        
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (m.find()) {</span>
+<span class="fc" id="L47">            c = m.group();</span>
+<span class="fc" id="L48">            idx = m.start();</span>
+
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">            if (&quot;-&quot;.equals(c) &amp;&amp; idx == 0) {</span>
+<span class="fc" id="L51">                this.ireceiver.receive(&quot;NumberFormatException(\&quot;Chua ho tro so am s1: &quot;</span>
+                        + s1 + &quot;\&quot;)&quot;);
+<span class="fc" id="L53">                throw new NumberFormatException(&quot;\&quot;Chua ho tro so am s1: &quot;</span>
+                        + s1 + &quot;\&quot;&quot;); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
+            }
+<span class="fc" id="L56">            this.ireceiver.receive(&quot;NumberFormatException(\&quot;Loi o tham so s1 tai vi tri &quot;</span>
+                    + idx + &quot;: &quot; + c + &quot;\&quot;)&quot;);
+<span class="fc" id="L58">            throw new NumberFormatException(&quot;\&quot;Loi o tham so s1 tai vi tri &quot;</span>
+                    + idx + &quot;: &quot; + c + &quot;\&quot;&quot;); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException   
+        }
+<span class="fc" id="L61">        m = p.matcher(s2);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (m.find()) {</span>
+<span class="fc" id="L63">            c = m.group();</span>
+<span class="fc" id="L64">            idx = m.start();</span>
+<span class="pc bpc" id="L65" title="1 of 4 branches missed.">            if (&quot;-&quot;.equals(c) &amp;&amp; idx == 0) {</span>
+<span class="fc" id="L66">                this.ireceiver.receive(&quot;NumberFormatException(\&quot;Chua ho tro so am s1: &quot;</span>
+                        + s1 + &quot;\&quot;)&quot;);
+<span class="fc" id="L68">                throw new NumberFormatException(&quot;\&quot;Chua ho tro so am s1: &quot;</span>
+                        + s1 + &quot;\&quot;&quot;); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
+            }
+<span class="fc" id="L71">            this.ireceiver.receive(&quot;NumberFormatException(\&quot;Loi o tham so s2 tai vi tri &quot;</span>
+                    + idx + &quot;: &quot; + c + &quot;\&quot;)&quot;);
+<span class="fc" id="L73">            throw new NumberFormatException(&quot;\&quot;Loi o tham so s2 tai vi tri &quot;</span>
+                    + idx + &quot;: &quot; + c + &quot;\&quot;&quot;); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException      
+        }
+
+        // Lặp từ 0 đến max lần
+<span class="fc bfc" id="L78" title="All 4 branches covered.">        for (int i = 0; i &lt; ((length1 &gt; length2) ? length1 : length2); i++) {</span>
+<span class="fc" id="L79">            pos1 = length1 - i - 1;// cập nhật lại vị trí chuỗi s1</span>
+<span class="fc" id="L80">            pos2 = length2 - i - 1;// cập nhật lại vị trí chuỗi s2</span>
+
+            // XĂ©t vá»‹ trĂ­ cá»§a 2 chuá»—i xem cĂ³ &gt;= 0 hay khĂ´ng
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">            c1 = (pos1 &gt; -1) ? s1.charAt(pos1) : '0';</span>
+
+<span class="fc bfc" id="L85" title="All 2 branches covered.">            c2 = (pos2 &gt;= 0) ? s2.charAt(pos2) : '0';</span>
+
+<span class="fc" id="L87">            tong = (c1 - '0') + (c2 - '0') + nho;// chuyển kí tự thành số xong cộng cho số nhớ</span>
+<span class="fc" id="L88">            result = (tong % 10) + result;// Lấy kết quả tổng ở trên chia lấy dư cho 10 và ghép vào chuỗi kết quả</span>
+<span class="fc" id="L89">            nho = tong / 10;// Cập nhật lại số nhớ</span>
+<span class="fc" id="L90">            direction = &quot; Buoc &quot; + (i + 1) + &quot;:\n &quot; + c1 + &quot; + &quot; + c2 + &quot; = &quot; + (tong - nho) + &quot; + &quot; + nho + &quot; = &quot;</span>
+                    + tong + &quot; . Viet &quot; + tong % 10 + &quot; nho &quot; + nho + &quot;.\n&quot;;
+<span class="fc" id="L92">            this.ireceiver.receive(direction);</span>
+        }
+
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        if (nho &gt; 0) {</span>
+<span class="fc" id="L96">            result = 1 + result;// Nếu số nhớ còn dư thì ghép vào chuỗi kết quả</span>
+        }
+
+<span class="fc" id="L99">        return result;// Trả về kết quả thu được</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
