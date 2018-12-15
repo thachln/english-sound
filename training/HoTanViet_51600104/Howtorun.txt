@@ -1,1 +1,0 @@
-Testing for function upload and write log when program has been running by Using ( NetBeans IDE 8.2 ) Program
