@@ -63,10 +63,10 @@ public class MyBigNumber {
             c = m.group();
             idx = m.start();
             if ("-".equals(c) && idx == 0) {
-                this.ireceiver.receive("NumberFormatException(\"Chua ho tro so am s1: "
-                        + s1 + "\")");
-                throw new NumberFormatException("\"Chua ho tro so am s1: "
-                        + s1 + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
+                this.ireceiver.receive("NumberFormatException(\"Chua ho tro so am s2: "
+                        + s2 + "\")");
+                throw new NumberFormatException("\"Chua ho tro so am s2: "
+                        + s2 + "\""); // Nếu có chữ hoặc kí tự thì sẽ có NumberFormatException  
             }
             this.ireceiver.receive("NumberFormatException(\"Loi o tham so s2 tai vi tri "
                     + idx + ": " + c + "\")");
