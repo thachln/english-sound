@@ -1,4 +1,4 @@
-vui lòng tải file MyBigNumberApplication.jar trong thư mục "dist" và sử dụng như bình thường
+vui lòng tải file MyBigNumberApplication.jar tại địa chỉ : https://goo.gl/QnLbJR và sử dụng như bình thường
 
 CÁCH SỬ DỤNG
 
