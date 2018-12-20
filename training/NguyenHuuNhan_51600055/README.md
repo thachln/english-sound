@@ -1,4 +1,5 @@
-vui lòng tải file MyBigNumberApplication.jar tại địa chỉ : https://goo.gl/QnLbJR và sử dụng như bình thường
+đầu tiên , tải JRE theo hướng dẫn tại địa chỉ : https://goo.gl/9wXrcW
+sau đó tải file MyBigNumberApplication.jar tại địa chỉ : https://goo.gl/3PDnLY , double click vào file để chạy chương trình
 
 CÁCH SỬ DỤNG
 

@@ -1,3 +1,5 @@
+
+
 /**
  * Tác giả: Nguyễn Hữu Nhân.
  * Credit : Nguyễn Châu Thảo Quân
@@ -16,5 +18,5 @@ public interface IReceiver {
      * @since 2018
      */
 
-    public abstract void receive(String msg);
+    public void receive(String msg);
 }

@@ -37,12 +37,12 @@ public class MyBigNumber {
         int length1 = s1.length();// do dai chuoi thu 1
         int length2 = s2.length();// do dai chuoi thu 2
         int nho = 0;// Khởi tạo số nhớ = 0 để khi cộng sẽ có vài trường hợp lớn hơn 9
-        int pos1 = 0;// Vị trí chuỗi s1
-        int pos2 = 0;// Vị trí chuỗi s2
-        char c1;// kí tự c1 dùng để lấy kí tự cuối cùng của chuỗi s1
-        char c2;// kí tự c2 dùng để lấy kí tự cuối cùng của chuỗi s2
+        int c1;// kí tự c1 dùng để lấy kí tự cuối cùng của chuỗi s1
+        int c2;// kí tự c2 dùng để lấy kí tự cuối cùng của chuỗi s2
         int tong = 0;// Khởi tạo biến tổng = 0 để cộng 2 kí tự cuối cùng lại với nhau
-        
+        int getUnit = 0;// variable get The number per unit
+        int i = 0;
+
         if (m.find()) {
             c = m.group();
             idx = m.start();
@@ -75,26 +75,49 @@ public class MyBigNumber {
         }
 
         // Lặp từ 0 đến max lần
-        for (int i = 0; i < ((length1 > length2) ? length1 : length2); i++) {
-            pos1 = length1 - i - 1;// cập nhật lại vị trí chuỗi s1
-            pos2 = length2 - i - 1;// cập nhật lại vị trí chuỗi s2
+        for (i = 0; i < (length1 < length2 ? length2 : length1); i++) {
 
             // XĂ©t vá»‹ trĂ­ cá»§a 2 chuá»—i xem cĂ³ >= 0 hay khĂ´ng
-            c1 = (pos1 > -1) ? s1.charAt(pos1) : '0';
+            c1 = i < length1 ? (s1.charAt(length1 - i - 1) - '0') : 0;
 
-            c2 = (pos2 >= 0) ? s2.charAt(pos2) : '0';
+            c2 = i < length2 ? (s2.charAt(length2 - i - 1) - '0') : 0;
 
-            tong = (c1 - '0') + (c2 - '0') + nho;// chuyển kí tự thành số xong cộng cho số nhớ
-            result = (tong % 10) + result;// Lấy kết quả tổng ở trên chia lấy dư cho 10 và ghép vào chuỗi kết quả
+            tong = c1 + c2 + nho;// chuyển kí tự thành số xong cộng cho số nhớ
+            getUnit = tong % 10;
+
+            if (nho == 0) {
+                direction += "\n" + "Buoc " + (i + 1) + ": "
+                        + "Lay " + c1
+                        + " + " + c2
+                        + " = " + tong + ""
+                        + ". Viet " + getUnit
+                        + " nho " + tong / 10 + "\n";
+            } else {
+                direction += "\n" + "Buoc " + (i + 1) + ": "
+                        + "lay " + c1
+                        + " + " + c2
+                        + " = " + (c1 + c2)
+                        + " + " + nho
+                        + " = " + tong
+                        + ". Viet " + getUnit
+                        + " nho " + nho + "\n";
+            }
+
             nho = tong / 10;// Cập nhật lại số nhớ
-            direction = " Buoc " + (i + 1) + ":\n " + c1 + " + " + c2 + " = " + (tong - nho) + " + " + nho + " = "
-                    + tong + " . Viet " + tong % 10 + " nho " + nho + ".\n";
-            this.ireceiver.receive(direction);
+            result = getUnit + result;
+        }
+        if (nho > 0) {
+            result = nho + result;
+            direction += "\n" + "Buoc " + (i + 1) + ": "
+                    + "lay " + 0
+                    + " + " + 0
+                    + " nho " + 1
+                    + " = " + 1
+                    + ". Viet " + 1
+                    + "\n";
         }
 
-        if (nho > 0) {
-            result = 1 + result;// Nếu số nhớ còn dư thì ghép vào chuỗi kết quả
-        }
+        this.ireceiver.receive(direction);
 
         return result;// Trả về kết quả thu được
     }

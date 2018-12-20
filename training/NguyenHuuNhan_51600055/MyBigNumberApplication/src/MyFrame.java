@@ -1,3 +1,9 @@
+
+
+
+import java.util.logging.Logger;
+import org.apache.log4j.LogManager;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +15,6 @@
  * @author Administrator
  */
 public class MyFrame extends javax.swing.JFrame {
-
     /**
      * Creates new form MyFrame
      */
@@ -137,7 +142,6 @@ public class MyFrame extends javax.swing.JFrame {
         try {
             kq = myBigNumber.sum(soA, soB);
         } catch (NumberFormatException e) {
-            
         }
 
         ketqua.append("\n Ket qua : " + kq);

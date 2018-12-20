@@ -88,6 +88,18 @@ public class MyBigNumberTest implements IReceiver {
         MyBigNumber mb = new MyBigNumber(this);
         String sum = mb.sum("999990", "999999");
     }
+    
+    @Test(expected = NumberFormatException.class)
+    public void testSum_N_10() {
+        MyBigNumber mb = new MyBigNumber(this);
+        String sum = mb.sum("-9299990", "-999999");
+    }
+    
+    @Test(expected = NumberFormatException.class)
+    public void testSum_N_11() {
+        MyBigNumber mb = new MyBigNumber(this);
+        String sum = mb.sum("-922999s90", "-999s999");
+    }
 
     @Override
     public void receive(String msg) {
