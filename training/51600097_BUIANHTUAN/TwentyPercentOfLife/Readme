@@ -1,1 +1,13 @@
+Đây là bài cộng 2 số được viết bởi Bùi Anh Tuấn.
+Với sự tham khảo từ bài các bạn đi trước.
 
+
+Cách hoạt động của bài cộng 2 số của mình dựa trên đúng tên gọi của nó.
+
+Các bạn nếu muốn chạy nó thì phải tạo biến mới để chạy như trong file PassThisProject.java mình đã làm mẫu cho các bạn trước vài trường hợp.
+
+file GetData.java là file interface.
+
+file myBigNumber.java là file code
+
+file Caculendar.java là phần giao diện.
