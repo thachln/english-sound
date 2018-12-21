@@ -100,7 +100,7 @@ https://drive.google.com/file/d/1jb3WKiG_gFC_8oG0EinlshppCdeFMKma/view?usp=shari
 
 2. Mở netBean lên sau đó làm các theo các bước sau:
 
-( Lưu ý sử dụng : NetBeans IDE 8.2 )
+**( Lưu ý sử dụng : NetBeans IDE 8.2 )**
 
  - B1: Giải nén file MyBigNumber.rar
  - B2: Trong giap diện của netBeans tìm trên thanh công cụ phía trên góc bên trái và Nhấn File -> Open Projects... 
