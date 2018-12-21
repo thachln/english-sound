@@ -11,9 +11,8 @@ CÁCH 2 : CÁCH MÀ HỌC SINH LỚP 3 THÍCH DÙNG
 
 vui lòng tải clip hướng dẫn tại địa chỉ : https://goo.gl/1jw2De và làm theo  . Nếu sau khi xem clip mà vẫn chưa mở được , vui lòng liên hệ qua email : nguyenhuunhan26@gmail.com để được hướng dẫn cụ thể . Cách gửi email bạn có thể tham khảo tại địa chỉ : https://www.google.com/ với từ khóa : "Cách gửi email".
 
-CÁCH SỬ DỤNG
+HƯỚNG DẪN SỬ DỤNG PHẦN MỀM "CỘNG 2 SỐ"
 
-Cách 1 : cách mà người thường hay sử dụng
 Bước 1 : Nhập số đầu tiên vào ô kế bên "Số A"
 Bước 2 : Nhập số thứ hai vào ô kế bên "Số B"
 Bước 3 : Bấm nút "Thực hiện"
