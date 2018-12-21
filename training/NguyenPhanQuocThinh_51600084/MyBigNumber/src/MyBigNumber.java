@@ -1,88 +1,120 @@
 import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author Nguyen Phan Quoc Thinh
+ * Tác Giả: Nguyễn Phan Quốc Thịnh
+ * 
  */
+
 public class MyBigNumber {
-    /**
-     * @param s1 chuỗi số 1
-     * @param s2 chuỗi số 2
-     * @return 
-     */
     
         /*example : 38 + 9
         Step 1: 8 cộng 9 bằng 17 nhớ 1
 	 3 + 0 + nho = 4
 
-	 return result(41)
-        */
+	 return kết quả 41
+        */    
+    private IReceiver ireceiver;
+
+    public MyBigNumber(final IReceiver ireceiver) {
+        this.ireceiver = ireceiver;
+    }
     
-    
-    public static String sum(String s_1, String s_2){
+    public String sum( String s_1, String s_2){
+        
+        // Khai Báo ở đây
+        
+        //Pattern xét kí tự còn \D trong class partern có ký tự là số từ 0 đến 9
+        Pattern p = Pattern.compile("\\D");
+        //Sau đó tạo ra matcher xét kí tự
+        Matcher m = p.matcher(s_1);
+        
         String result = "";
+        String direction = "";  
+        
+        String c;
+        int id;
+
+        int length1 = s_1.length();// do dai chuoi thu 1
+        int length2 = s_2.length();// do dai chuoi thu 2
+        int nho = 0;// Khởi tạo số nhớ = 0 để khi cộng sẽ có vài trường hợp lớn hơn 9
+        int pos1 = 0;// Vị trí chuỗi s1
+        int pos2 = 0;// Vị trí chuỗi s2
+        char c1;// kí tự c1 dùng để lấy kí tự cuối cùng của chuỗi s1
+        char c2;// kí tự c2 dùng để lấy kí tự cuối cùng của chuỗi s2
+        int tong = 0;// Khởi tạo biến tổng = 0 để cộng 2 kí tự cuối cùng lại với nhau
         int str_1 = s_1.length(); //lấy độ dài của số đầu tiên
         int str_2 = s_2.length(); //lấy độ dài của số 2
         
-        int max = str_1; //d?t gi?i h?n chu?n c?a 2 chu?i
+        // lay do dau lon nhat giua a va b
+        int max = str_1;
         
-        
-        if(str_1 > str_2 ){//so sánh dô dài 2 chu?i d? ti?p t?c ch?y vòng l?p
+        if(str_1 > str_2 ){
             max = str_1;
         }else{
             max = str_2;
         }
         
-        int flag = 0; // t?o 1 bi?n c? d? luu l?i giá tr? du
-        
-        for (int i=0; i<max ; i++){
-            int num_1 = str_1 - i - 1 ; //giá tr? cu?i cùng c?a chu?i 1;
-            int num_2 = str_2 - i - 1 ; //giá tr? cu?i cùng c?a chu?i 2;
-            
-            char dig_1 = '0', dig_2 = '0'; // bien luu vao khi xuat ket qua ra
-            
-            if(num_1 >=0 ){
-                dig_1 = s_1.charAt(num_1); // lay so o vtri num_1
+        if (m.find()) {
+            c = m.group();
+            id = m.start();
+            if ("-".equals(c) && id == 0) {
+                this.ireceiver.receive("Chương trình chưa hỗ trợ số âm cho học sinh lớp 3. Vui lòng nhập lại số A ");
+                throw new NumberFormatException("Chương trình chưa hỗ trợ số âm cho học sinh lớp 3. Vui lòng nhập lại số A "); 
+                // Nếu người dùng nhập số âm thì pro thông báo cho
             }
-            if(num_2 >=0 ){
-                dig_2 = s_2.charAt(num_2); // lay so o vtri num_2
-            }
-            
-            int temp_1 = dig_1 -'0'; 
-            int temp_2 = dig_2 -'0'; 
-            
-            int sumAll = temp_1 + temp_2 + flag; // bi?n tính t?ng giá tr?.
-            
-            if(num_1 > 0){
-                result += (sumAll % 10);
-            }else {
-                result += sumAll;
-            }
-            flag = sumAll/10 ; //cong cac so du lai
+            this.ireceiver.receive("Bạn đã nhập nhầm kí tự vào sô A. Vui lòng check lại.");
+            throw new NumberFormatException("Bạn đã nhập nhầm kí tự vào sô A. Vui lòng check lại."); 
+            // // Nếu người dùng nhập chữ hoặc kí tự thì pro thông báo cho  
         }
-        return result;
-    }
+        m = p.matcher(s_2);
+        if (m.find()) {
+            c = m.group();
+            id = m.start();
+            if ("-".equals(c) && id == 0) {
+                this.ireceiver.receive("Chương trình chưa hỗ trợ số âm cho học sinh lớp 3. Vui lòng nhập lại số B ");
+                throw new NumberFormatException("Chương trình chưa hỗ trợ số âm cho học sinh lớp 3. Vui lòng nhập lại số B"); 
+                // Nếu người dùng nhập số âm thì pro thông báo cho 
+            }
+            this.ireceiver.receive("Bạn đã nhập nhầm kí tự vào sô B. Vui lòng check lại.");
+            throw new NumberFormatException("Bạn đã nhập nhầm kí tự vào sô B. Vui lòng check lại."); 
+                // // Nếu người dùng nhập chữ hoặc kí tự thì pro thông báo cho      
+        }
 
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // TODO code application logic here
-        System.out.println("Nhập vào số thứ nhất: ");
-        String s1 = scanner.nextLine();
-        System.out.println("Nhập vào số thứ hai: ");
-        String s2 = scanner.nextLine();
+        // Lặp từ 0 đến max lần
         
-        System.out.println(sum(s1,s2));
+        for (int i = 0; i < max; i++) {
+            pos1 = length1 - i - 1;
+            // cập nhật lại vị trí chuỗi s1
+            pos2 = length2 - i - 1;
+            // cập nhật lại vị trí chuỗi s2
+
+            
+            c1 = (pos1 > -1) ? s_1.charAt(pos1) : '0';
+
+            c2 = (pos2 >= 0) ? s_2.charAt(pos2) : '0';
+
+            tong = (c1 - '0') + (c2 - '0') + nho;
+            // chuyển kí tự thành số xong cộng cho số nhớ
+            result = (tong % 10) + result;
+            // Lấy kết quả tổng ở trên chia lấy dư cho 10 và ghép vào chuỗi kết quả
+            nho = tong / 10;// Cập nhật lại số nhớ
+            direction = " Bước " + (i + 1) + ":\n " + c1 + " + " + c2 + " = " + (tong - nho) + " + " + nho + " = "+ tong + " . Ta có " + tong % 10 + " nhớ " + nho + ".\n";
+            this.ireceiver.receive(direction);
+        }
+
+        if (nho > 0) {
+            result = 1 + result;
+            // Nếu số nhớ còn dư thì ghép vào chuỗi kết quả
+        }
+
+        return result;
+        // Trả về kết quả thu được
     }
-    
 }
+    
+

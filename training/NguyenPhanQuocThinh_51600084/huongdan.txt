@@ -1,5 +1,0 @@
-t?m th?i chýõng tr?nh trong quá tr?nh phát tri?n
-Hi?n t?i ð? ð?c chýõng tr?nh th? ta dùng netbean ð? open project
-m? file MyBigNumber.java và run. Sau ðó nh?p 2 s? vào
-Có th? dùng cmd ð? ð?c file MyBigNumber.java
-Ð?a ch? ../MyBigNumber/src/MyBigNumber.java
