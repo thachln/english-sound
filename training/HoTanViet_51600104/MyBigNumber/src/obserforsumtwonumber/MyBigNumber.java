@@ -16,7 +16,7 @@ import java.util.Iterator;
  */
 public class MyBigNumber extends Observer {
 
-    public MyBigNumber(final Subject subject) {
+    public MyBigNumber(final Subject subject) {//tao subject de tien hanh Observer
         /**
          * dat cho ngoi
          */
@@ -40,7 +40,7 @@ public class MyBigNumber extends Observer {
         String replaceFirst1 = s2.replaceFirst("^0+(?!$)", "");
 
         String result = "";
-        StringBuffer sb1;
+        final StringBuffer sb1;
         MyBigNumber cd = new MyBigNumber();
         int string1 = replaceFirst.length(); //lay do dai hai chuoi string1 va string2
         int string2 = replaceFirst1.length();
@@ -109,24 +109,24 @@ public class MyBigNumber extends Observer {
             step += 1;
 
             flag = sumAll / 10; //c?ng s? du.
-            if (number1 > 0) {
+            if (number1 > 0) {//khi  vi tri chua dat toi 0
 
                 result += (sumAll % 10);
                 cd.send(step, digit1, digit2, result, end);
 
-            } else {
+            } else {//khi vi tri da het
 
-                if (sumAll > 9) {
+                if (sumAll > 9) { //9 + 9 hoac tuong tu
 
                     result += (sumAll % 10);//truong hop sumAll lon hon 9
                     result += 1;
                     cd.send(step, digit1, digit2, result, end);
 
-                    if (end != 2) {
+                    if (end != 2) {//bien chua lon hon 9 va chay het chuoi
                         end = 1;
                     }
 
-                } else {
+                } else {//khi 4 + 5 hoac tuong tu
                     result += sumAll;
                     cd.send(step, digit1, digit2, result, end);
 
@@ -136,9 +136,9 @@ public class MyBigNumber extends Observer {
 
         }
 
-        sb1 = new StringBuffer(result);
+        sb1 = new StringBuffer(result);//doi ra string builder
 
-        return sb1.reverse().toString();
+        return sb1.reverse().toString();//reverser string with no loop
 
     }
 
