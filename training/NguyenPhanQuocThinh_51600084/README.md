@@ -1,11 +1,10 @@
 ﻿-----------------------------------Chương trình cộng 2 số-------------------------------------------------
 -----------------------------------------Giới thiệu phần mềm---------------------------------------------------
 ***************************Phần mềm này được viết bởi Nguyễn Phan Quốc Thịnh***********************************
-
 * Phần mềm cộng 2 số dễ hiểu, dễ dàng sử dụng giúp cho một học sinh lớp 3 có thể dễ dàng học tập.
 * Phần mềm đã được đóng gói và check kỹ lưỡng.
 * Người dùng hoặc người phát triển có thể chạy file MyBigNumberTest.java trên netbean để test phần mềm
-
+* Link Dowload phần mềm https://drive.google.com/file/d/16IeoSbe3I34sksxTqbbhAQINpGbHO88n/view?fbclid=IwAR1IrjD-8GeAXUVUypZDMKfEwvIwJ4Jib_4AisdI5Vhuc5Dr9cpXjZuTTWs
 
 -----------------------------------------Hướng dẫn sử dụng---------------------------------------------------
 
