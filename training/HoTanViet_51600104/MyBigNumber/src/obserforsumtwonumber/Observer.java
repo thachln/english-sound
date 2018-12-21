@@ -18,6 +18,6 @@ abstract class Observer {
     //thi lay bao nhieu bien
 
     public abstract void update();
-    public abstract void send(int step, int s1, int s2, String stack);
+    public abstract void send(int step, int s1, int s2, String stack, int end);
     
 }

@@ -13,14 +13,23 @@ import java.util.Scanner;
  */
 public class ObserverDemo {
     public static void main( String[] args ) {
+        while(true){
         Subject sub = new Subject();
         // Client configures the number and type of Observers
         new  MyBigNumber(sub);
+        String s1,s2;
+
+   
+        Scanner scanner = new Scanner(System.in);   // Lớp đọc giá trị nhập vào
+         System.out.println("\t\t\t~ WELCOME to Sum two number program ~"); 
+        System.out.println("FirstNumber: ");
+        s1 = scanner.nextLine();
+        System.out.println("SecondNumber: ");
+        s2= scanner.nextLine();
         
-       String s1 = "999";
-       String s2 = "999";
+        System.out.println("\t\t\t   ~ Solution ~");
       
-            
-            sub.setState(s1,s2);
+        sub.setState(s1,s2);
+    }
     }
 }
