@@ -40,7 +40,7 @@ Hướng dẫn sử dụng ứng dụng cộng hai số
  - B2: Nhập số thứ hai rồi Enter
  - B3: Enter lần nữa để tiến hành chạy chướng trình và các bước hướng dẫn in ra nằm phía dưới của app.
  - B4:  Muốn sử dụng tiếp thì quay lại bước 1.
-4. Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây<br/>
+4. **Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây**<br/>
             1 (Chuỗi 1 chứa kí tự chữ, chuỗi 2 thỏa điều kiện)<br/>
             2 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự chữ)<br/>
             3 (Chuỗi 1 và chuỗi 2 chứa kí tự chữ)<br/>
@@ -56,7 +56,7 @@ Hướng dẫn sử dụng ứng dụng cộng hai số
            13 (Chuỗi 1 rỗng và chuỗi 2 thỏa điều kiện)<br/>
            14 (Chuỗi 2 rỗng và chuỗi 1 thỏa điều kiện)<br/>
            15 (Chuỗi 1 và chuỗi 2 thỏa điều kiện)<br/>
-Kết quả mong đợi:<br/> 
+**Kết quả mong đợi**:<br/> 
             1 Thông báo lỗi NumberFormatException<br/>
             2 Thông báo lỗi NumberFormatException<br/>
             3 Thông báo lỗi NumberFormatException<br/>
@@ -72,7 +72,7 @@ Kết quả mong đợi:<br/>
            13 Kết quả đúng<br/>
            14 Kết quả đúng<br/>
            15 Kết quả đúng<br/>
-Tình trạng:<br/>
+**Tình trạng**:<br/>
             1 Hoàn thành tốt<br/>
             2 Hoàn thành tốt<br/>
             3 Hoàn thành tốt<br/>
