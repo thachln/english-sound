@@ -40,12 +40,12 @@ Hướng dẫn sử dụng ứng dụng cộng hai số
  - B2: Nhập số thứ hai rồi Enter
  - B3: Enter lần nữa để tiến hành chạy chướng trình và các bước hướng dẫn in ra nằm phía dưới của app.
  - B4:  Muốn sử dụng tiếp thì quay lại bước 1.
-4. Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây:
-            - (Chuỗi 1 chứa kí tự chữ, chuỗi 2 thỏa điều kiện)
-             (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự chữ)
-             (Chuỗi 1 và chuỗi 2 chứa kí tự chữ)
-             (Chuỗi 1 chứa kí tự đặc biệt, chuỗi 2 thỏa điều kiện)
-            Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự đặc biệt),
+4. Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây
+            1 (Chuỗi 1 chứa kí tự chữ, chuỗi 2 thỏa điều kiện),
+            2 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự chữ)
+            3 (Chuỗi 1 và chuỗi 2 chứa kí tự chữ)
+            4 (Chuỗi 1 chứa kí tự đặc biệt, chuỗi 2 thỏa điều kiện)
+            5 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự đặc biệt),
             6 (Chuỗi 1 và chuỗi 2 chứa kí tự đặc biệt)
             7 (Chuỗi 1 là số âm, chuỗi 2 thỏa điều kiện),
             8 (Chuỗi 1 thỏa điều kiện, chuỗi 2 là số âm),
