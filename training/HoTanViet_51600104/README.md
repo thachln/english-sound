@@ -25,7 +25,7 @@ Hướng dẫn sử dụng ứng dụng cộng hai số
  - B1: copy file Sum.rar vào bất kì ổ đĩa nào trên máy khách hàng mà khách hàng mong muốn ở đây mình mặc định là cài ở ổ đĩa D
  - B2: Giải nén phần mềm.
  - B3: Nếu là cài ở đĩa D(và không nằm trong folder nào khác) thì hãy thêm đường dẫn D:\Sum vào biến môi trường path
- - B4: Mở cmd và gõ dòng lệnh ( trong dấu ngoặc ) theo thứ tự sau ( F: ) -> ( cd Sum ) -> ( java -jar Obserforsumnumber.jar ) 
+ - B4: Mở cmd và gõ dòng lệnh ( trong dấu ngoặc ) theo thứ tự sau ( D: ) -> ( cd Sum ) -> ( java -jar Obserforsumnumber.jar ) 
  - B5: Bắt đầu thử nghiệm phần mềm cộng 2 số thôi nào!
  ***
  Nếu như là muốn cài phần mềm ở ổ đĩa khác không phải là ở đĩa D hay trong folder nào đó thì hãy làm theo các bước sau đây:
