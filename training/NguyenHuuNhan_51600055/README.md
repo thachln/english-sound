@@ -1,8 +1,19 @@
 đầu tiên , tải JRE theo hướng dẫn tại địa chỉ : https://goo.gl/9wXrcW
-sau đó tải file MyBigNumberApplication.jar tại địa chỉ : https://goo.gl/3PDnLY , double click vào file để chạy chương trình
+sau đó tải file MyBigNumberApplication.jar tại địa chỉ : https://goo.gl/3PDnLY 
+
+KHỞI ĐỘNG CHƯƠNG TRÌNH
+
+CÁCH 1 : CÁCH MÀ NGƯỜI THƯỜNG HAY SỬ DỤNG
+
+double click vào file vừa tải , và tận hưởng
+
+CÁCH 2 : CÁCH MÀ HỌC SINH LỚP 3 THÍCH DÙNG
+
+vui lòng tải clip hướng dẫn tại địa chỉ : https://goo.gl/1jw2De và làm theo  . Nếu sau khi xem clip mà vẫn chưa mở được , vui lòng liên hệ qua email : nguyenhuunhan26@gmail.com để được hướng dẫn cụ thể . Cách gửi email bạn có thể tham khảo tại địa chỉ : https://www.google.com/ với từ khóa : "Cách gửi email".
 
 CÁCH SỬ DỤNG
 
+Cách 1 : cách mà người thường hay sử dụng
 Bước 1 : Nhập số đầu tiên vào ô kế bên "Số A"
 Bước 2 : Nhập số thứ hai vào ô kế bên "Số B"
 Bước 3 : Bấm nút "Thực hiện"
