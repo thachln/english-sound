@@ -11,6 +11,7 @@ BUILD OUTPUT DESCRIPTION
 Giới thiệu về phần mềm
 ----------------------
     - Phần mềm cộng 2 số, trong đó 2 số nhập vào dưới dạng là chuỗi (String)
+	- Phần mềm được thiết kế theo mô hình Design Pattern - Observer Pattern ( Đảm bảo được sự thay đổi của khách hàng trong những lúc cần thiết )
 	- Có thể gặp vấn đề về code sạch (do trang myworkspace.vn/java bị lỗi nên không thể test code được, hình ảnh lỗi được lưu trong file Prove)
 	- Phần mềm đã được đóng gói và dễ dàng sử dụng nó.
 	- Người dùng có thể chạy file MyBigNumberTest.java để xem các testcase về phần mềm.
