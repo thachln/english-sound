@@ -40,54 +40,54 @@ Hướng dẫn sử dụng ứng dụng cộng hai số
  - B2: Nhập số thứ hai rồi Enter
  - B3: Enter lần nữa để tiến hành chạy chướng trình và các bước hướng dẫn in ra nằm phía dưới của app.
  - B4:  Muốn sử dụng tiếp thì quay lại bước 1.
-4. Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây
+4. Các lỗi thường gặp phải khi sử dụng phần mềm và phải tránh các trường hợp sau đây<br/>
             1 (Chuỗi 1 chứa kí tự chữ, chuỗi 2 thỏa điều kiện)<br/>
-            2 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự chữ)
-            3 (Chuỗi 1 và chuỗi 2 chứa kí tự chữ)
-            4 (Chuỗi 1 chứa kí tự đặc biệt, chuỗi 2 thỏa điều kiện)
-            5 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự đặc biệt),
-            6 (Chuỗi 1 và chuỗi 2 chứa kí tự đặc biệt)
-            7 (Chuỗi 1 là số âm, chuỗi 2 thỏa điều kiện),
-            8 (Chuỗi 1 thỏa điều kiện, chuỗi 2 là số âm),
-            9 (Chuỗi 1 và chuỗi 2 là số âm),
-           10 (Chuỗi 1 dư ký số '0' ở đầu),
-           11 (Chuỗi 2 dư ký số '0' ở đầu),
-           12 (Chuỗi 1 và chuỗi 2 dư ký số '0' ở đầu),
-           13 (Chuỗi 1 rỗng và chuỗi 2 thỏa điều kiện),
-           14 (Chuỗi 2 rỗng và chuỗi 1 thỏa điều kiện),
-           15 (Chuỗi 1 và chuỗi 2 thỏa điều kiện)
-Kết quả mong đợi: 
-            1 Thông báo lỗi NumberFormatException,
-            2 Thông báo lỗi NumberFormatException,
-            3 Thông báo lỗi NumberFormatException,
-            4 Thông báo lỗi NumberFormatException,
-            5Thông báo lỗi NumberFormatException,
-            6 Thông báo lỗi NumberFormatException,
-            7 Thông báo lỗi NumberFormatException,
-            8 Thông báo lỗi NumberFormatException,
-            9 Thông báo lỗi NumberFormatException,
-           10 Chuỗi kết quả đúng và không dư ký số '0',
-           11 Chuỗi kết quả đúng và không dư ký số '0',
-           12 Chuỗi kết quả đúng và không dư ký số '0',
-           13 Kết quả đúng,
-           14 Kết quả đúng,
-           15 Kết quả đúng,
-Tình trạng:
-            1 Hoàn thành tốt,
-            2 Hoàn thành tốt,
-            3 Hoàn thành tốt,
-            4 Hoàn thành tốt,
-            5Hoàn thành tốt,
-            6 Hoàn thành tốt,
-            7 Hoàn thành tốt,
-            8 Hoàn thành tốt,
-            9 Hoàn thành tốt,
-           10 Hoàn thành tốt,
-           11 Hoàn thành tốt',
-           12 Hoàn thành tốt',
-           13 Hoàn thành tốt,
-           14 Hoàn thành tốt,
-           15 Hoàn thành tốt
+            2 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự chữ)<br/>
+            3 (Chuỗi 1 và chuỗi 2 chứa kí tự chữ)<br/>
+            4 (Chuỗi 1 chứa kí tự đặc biệt, chuỗi 2 thỏa điều kiện)<br/>
+            5 (Chuỗi 1 thỏa điều kiện, chuỗi 2 chứa kí tự đặc biệt)<br/>
+            6 (Chuỗi 1 và chuỗi 2 chứa kí tự đặc biệt)<br/>
+            7 (Chuỗi 1 là số âm, chuỗi 2 thỏa điều kiện)<br/>
+            8 (Chuỗi 1 thỏa điều kiện, chuỗi 2 là số âm)<br/>
+            9 (Chuỗi 1 và chuỗi 2 là số âm)<br/>
+           10 (Chuỗi 1 dư ký số '0' ở đầu)<br/>
+           11 (Chuỗi 2 dư ký số '0' ở đầu)<br/>
+           12 (Chuỗi 1 và chuỗi 2 dư ký số '0' ở đầu)<br/>
+           13 (Chuỗi 1 rỗng và chuỗi 2 thỏa điều kiện)<br/>
+           14 (Chuỗi 2 rỗng và chuỗi 1 thỏa điều kiện)<br/>
+           15 (Chuỗi 1 và chuỗi 2 thỏa điều kiện)<br/>
+Kết quả mong đợi:<br/> 
+            1 Thông báo lỗi NumberFormatException<br/>
+            2 Thông báo lỗi NumberFormatException<br/>
+            3 Thông báo lỗi NumberFormatException<br/>
+            4 Thông báo lỗi NumberFormatException<br/>
+            5Thông báo lỗi NumberFormatException<br/>
+            6 Thông báo lỗi NumberFormatException<br/>
+            7 Thông báo lỗi NumberFormatException<br/>
+            8 Thông báo lỗi NumberFormatException<br/>
+            9 Thông báo lỗi NumberFormatException<br/>
+           10 Chuỗi kết quả đúng và không dư ký số '0'<br/>
+           11 Chuỗi kết quả đúng và không dư ký số '0'<br/>
+           12 Chuỗi kết quả đúng và không dư ký số '0'<br/>
+           13 Kết quả đúng<br/>
+           14 Kết quả đúng<br/>
+           15 Kết quả đúng<br/>
+Tình trạng:<br/>
+            1 Hoàn thành tốt<br/>
+            2 Hoàn thành tốt<br/>
+            3 Hoàn thành tốt<br/>
+            4 Hoàn thành tốt<br/>
+            5Hoàn thành tốt<br/>
+            6 Hoàn thành tốt<br/>
+            7 Hoàn thành tốt<br/>
+            8 Hoàn thành tốt<br/>
+            9 Hoàn thành tốt<br/>
+           10 Hoàn thành tốt<br/>
+           11 Hoàn thành tốt'<br/>
+           12 Hoàn thành tốt'<br/>
+           13 Hoàn thành tốt<br/>
+           14 Hoàn thành tốt<br/>
+           15 Hoàn thành tốt<br/>
 
 ======================================
 
