@@ -1,0 +1,1 @@
+﻿Xem diagram của English sound ở đây
