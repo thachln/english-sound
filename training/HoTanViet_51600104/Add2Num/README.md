@@ -97,7 +97,7 @@ Hướng dẫn chạy file MyBigNumberTest.java để xem testcase
 --------------------------------------------------------
 
 1. Tải file MyBigNumber.rar theo đường dẫn: 
-https://drive.google.com/file/d/1tYXZSgO8QDn1tSTbvfvbGju8XNGDWgfC/view?usp=sharing
+https://drive.google.com/file/d/1TkPLZQJFym8mlvTNMbYMeiRdZRSTxgCH/view?usp=sharing
 
 2. Mở netBean lên sau đó làm các theo các bước sau:
 
