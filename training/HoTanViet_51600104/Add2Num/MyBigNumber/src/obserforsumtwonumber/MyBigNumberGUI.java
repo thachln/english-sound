@@ -11,13 +11,16 @@ import java.util.Scanner;
  *
  * @author 51600104
  */
-public class ObserverDemo {
+public class MyBigNumberGUI implements IReceiver{
     public static void main( String[] args ) {
-        while(true){
-        Subject sub = new Subject();
-        // Client configures the number and type of Observers
-        new  MyBigNumber(sub);
         String s1,s2;
+        
+        while(true){
+        MyBigNumberGUI sub = new MyBigNumberGUI();
+        // Client configures the number and type of Observers
+        MyBigNumber m = new MyBigNumber(sub);
+       
+        
 
    
         Scanner scanner = new Scanner(System.in);   // Lớp đọc giá trị nhập vào
@@ -29,7 +32,15 @@ public class ObserverDemo {
         
         System.out.println("\t\t\t   ~ Solution ~");
       
-        sub.setState(s1,s2);
+        
+        String sum = m.sum(s1, s2);
+        System.out.println("Kết quả: " + sum);
     }
+    }
+
+    @Override
+    public void send(String msg) {
+        //auto execute the program
+       System.out.println(msg);
     }
 }
