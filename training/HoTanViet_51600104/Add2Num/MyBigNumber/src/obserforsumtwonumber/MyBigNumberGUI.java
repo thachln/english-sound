@@ -11,36 +11,29 @@ import java.util.Scanner;
  *
  * @author 51600104
  */
-public class MyBigNumberGUI implements IReceiver{
-    public static void main( String[] args ) {
-        String s1,s2;
-        
-        while(true){
+public class MyBigNumberGUI implements IReceiver {
+
+    public static void main(String[] args) {
+
         MyBigNumberGUI sub = new MyBigNumberGUI();
         // Client configures the number and type of Observers
         MyBigNumber m = new MyBigNumber(sub);
-       
-        
 
-   
-        Scanner scanner = new Scanner(System.in);   // Lớp đọc giá trị nhập vào
-         System.out.println("\t\t\t~ WELCOME to Sum two number program ~"); 
+        System.out.println("\t\t\t~ WELCOME to Sum two number program ~");
         System.out.println("FirstNumber: ");
-        s1 = scanner.nextLine();
+
         System.out.println("SecondNumber: ");
-        s2= scanner.nextLine();
-        
+
         System.out.println("\t\t\t   ~ Solution ~");
-      
-        
-        String sum = m.sum(s1, s2);
+
+        String sum = m.sum(args[0], args[1]);
         System.out.println("Kết quả: " + sum);
-    }
+
     }
 
     @Override
     public void send(String msg) {
         //auto execute the program
-       System.out.println(msg);
+        System.out.println(msg);
     }
 }
