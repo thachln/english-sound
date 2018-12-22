@@ -28,9 +28,27 @@ public class MyBigNumber {
      * @return là tổng của hai số s1 và s2 cũng nằm dưới dạng chuỗi String.
      */
     public String sum(final String s1, final String s2) {
+        // Bước Zero: Rất quan trọng, check null hoặc Empty của s1 và s2
+        //Kiểm tra null
+        if (s1 == null) {
+            throw new NumberFormatException("Chuỗi s1 null error");
+        }
+
+        if (s1.isEmpty()) {
+            throw new NumberFormatException("Chuỗi s1 rỗng");
+        }
+
+        if (s2 == null) {
+            throw new NumberFormatException("Chuỗi s2 null error");
+
+        }
+
+        if (s2.isEmpty()) {
+            throw new NumberFormatException("Chuỗi s2 rỗng");
+        }
+
         // Bước I: Khai báo biến và xác định chuỗi lớn nhất cho biến max
         // Khai báo biến
-
         String replaceFirsts1 = s1.replaceFirst("^0+(?!$)", "");//loại bỏ số 0 ở đầu s1
         String replaceFirsts2 = s2.replaceFirst("^0+(?!$)", "");//loại bỏ số 0 ở đầu s2
         int max;// lưu chuỗi lớn nhất
@@ -45,11 +63,13 @@ public class MyBigNumber {
         String result = "";//Biến lưu kết quả
         String msg = "";// Biến tham số cho hàm send
 
-        Pattern ps1 = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
+        Pattern ps1 = Pattern.compile("[^A-Za-z0-9]");
         final Matcher ms1 = ps1.matcher(s1);//Matcher kết hợp với pattern để tìm các kí tự đặc biệt chuỗi 1
+        final Matcher ms11 = Pattern.compile("[a-zA-Z]+").matcher(s1);//tìm chữ 
 
-        Pattern ps2 = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
+        Pattern ps2 = Pattern.compile("[^A-Za-z0-9]");
         final Matcher ms2 = ps2.matcher(s2);//Matcher kết hợp với pattern để tìm các kí tự đặc biệt chuỗi 2
+        final Matcher ms22 = Pattern.compile("[a-zA-Z]+").matcher(s2);//tìm chữ 
 
         //Xác định chuỗi lớn nhất cho biến max
         if (lengths1 > lengths2) {
@@ -60,22 +80,16 @@ public class MyBigNumber {
 
         // Bước II: Thông báo lỗi
         // Kiểm tra từng kí tự của 2 chuỗi s1 và s2 có chữ không 
-        for (int i = 0; i < lengths1; i++) {
-
-            if (Character.isLetter(s1.charAt(i))) {
-                // Nếu chuỗi s1 có chữ hoặc kí tự thì sẽ có NumberFormatException
-                throw new NumberFormatException("Lưu ý: vị trí " + (i + 1) + " trong chuỗi " + s1
-                        + " không phải là số");
-            }
+        if (ms11.find()) {
+            // Nếu chuỗi s1 có chữ thì sẽ có NumberFormatException
+            throw new NumberFormatException("Lưu ý: vị trí " + (ms11.start() + 1) + " trong chuỗi " + s1
+                    + " không phải là số");
         }
 
-        for (int i = 0; i < lengths2; i++) {
-
-            if (Character.isLetter(s2.charAt(i))) {
-                // Nếu chuỗi s2 có chữ hoặc kí tự thì sẽ có NumberFormatException
-                throw new NumberFormatException("Lưu ý: vị trí " + (i + 1) + " trong chuỗi " + s2
-                        + " không phải là số");
-            }
+        if (ms22.find()) {
+            // Nếu chuỗi s1 có chữ thì sẽ có NumberFormatException
+            throw new NumberFormatException("Lưu ý: vị trí " + (ms22.start() + 1) + " trong chuỗi " + s1
+                    + " không phải là số");
         }
 
         // Kiểm tra số âm 
@@ -87,12 +101,12 @@ public class MyBigNumber {
             throw new NumberFormatException("Phần mềm chưa hỗ trợ số âm s2: " + s2);
         }
 
-        //Kí tự đặc biệt
-        while (ms1.find()) {
+        //Kiểm tra kí tự đặc biệt
+        if (ms1.find()) {
             throw new NumberFormatException("Vị trí " + (ms1.start() + 1) + " ở s1 là kí tự đặc biệt");
         }
 
-        while (ms2.find()) {
+        if (ms2.find()) {
             throw new NumberFormatException("Vị trí " + (ms2.start() + 1) + " ở s2 là kí tự đặc biệt");
         }
 

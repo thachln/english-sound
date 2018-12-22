@@ -20,9 +20,9 @@ public class MyBigNumberGUI implements IReceiver {
         MyBigNumber m = new MyBigNumber(sub);
 
         System.out.println("\t\t\t~ WELCOME to Sum two number program ~");
-        System.out.println("FirstNumber: ");
-
-        System.out.println("SecondNumber: ");
+       
+        System.out.println("FirstNumber: "+args[0]);
+        System.out.println("SecondNumber: "+args[1]);
 
         System.out.println("\t\t\t   ~ Solution ~");
 
