@@ -18,6 +18,10 @@ Testcase bao gồm 6 trường hợp:
 3) chuỗi b dài hơn a.
 4) chuỗi có ký tự đặc biệt khác [0-9].
 5) chuỗi có số âm.
+Cách chạy testcase:
+-bạn tạo 1 phần tử PassThisProject mới (PassThisProject pass = new PassThisProject();)
+-sau đó tạo 1 phần tử myBigNumber mới và gắn phần tử mới tạo vào. (myBigNumber mybignumber = new myBigNumber(pass);)
+-sau đó bạn tạo 2 số và gọi hàm sum trong myBigNumber để chạy (String sum  = mybignumber.sum("123","456");)
 
 
 hướng dẫn chạy phần mềm:
