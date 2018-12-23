@@ -13,8 +13,9 @@ public class PassThisProject implements GetData{
         //TestVer_1();
         //TestVer_2();
         //TestVer_3();
-        TestVer_4();
+        //TestVer_4();
         //TestVer_5();
+        TestVer_6();
     }
     public static void TestVer_1(){//Trường hợp đầu tiên chúng ta làm 1 phép tính với a b có độ dài bằng nhau.
         PassThisProject test_1 = new PassThisProject();
@@ -44,10 +45,16 @@ public class PassThisProject implements GetData{
        
     }
     
-    public static void TestVer_5(){//Trường hợp thứ năm chúng ta làm 1 phép tính với a b trong đó a có độ dài lớn hơn b.
+    public static void TestVer_5(){//Trường hợp thứ năm chúng ta làm 1 phép tính với a b trong đó a là số âm.
         PassThisProject test_2 = new PassThisProject();
         myBigNumber mybignumber = new myBigNumber(test_2);
-        String sum = mybignumber.sum("1239","423");
+        String sum = mybignumber.sum("-1239","423");
+       
+    }
+    public static void TestVer_6(){//Trường hợp thứ năm chúng ta làm 1 phép tính với a b trong đó a là số âm.
+        PassThisProject test_2 = new PassThisProject();
+        myBigNumber mybignumber = new myBigNumber(test_2);
+        String sum = mybignumber.sum("","423");
        
     }
     

@@ -49,16 +49,25 @@ public class myBigNumber{
                 s_2="0";
                 str_2=s_2.length();
             }
+            if(s_1.charAt(0)== '-'){
+                this.getData.takeandgive("NumberFormatException(\"Không hỗ trợ số âm: "+s_1);
+                throw new NumberFormatException("Em hãy nhập lại số đầu tiên đi nào (^_^) " +s_1);
+            }
+            if(s_2.charAt(0)== '-'){
+                this.getData.takeandgive("NumberFormatException(\"Không hỗ trợ số âm: "+s_2);
+                throw new NumberFormatException("Em hãy nhập lại số thứ hai đi nào (^_^) "+s_2);
+            }
             boolean p1 = s_1.matches(pattern);//*lưu giá trị của s_1.
             boolean p2 = s_2.matches(pattern);//*lưu giá trị của s_2.
-            if (s_1.charAt(0)== '-'|| !p1){
+            if (!p1){
                 this.getData.takeandgive("NumberFormatException(\"Ôi không số em đã nhập sai số đầu tiên rồi: "+s_1);
                 throw new NumberFormatException("Em hãy nhập lại số đầu tiên đi nào (^_^) " +s_1);
             }
-            if (s_2.charAt(0)== '-'|| !p2){
+            if (!p2){           
                 this.getData.takeandgive("NumberFormatException(\"Ôi không số em đã nhập sai số thứ hai rồi: "+s_2);
                 throw new NumberFormatException("Em hãy nhập lại số thứ hai đi nào (^_^) "+s_2);
             }
+            
             
             //*Thực hiện phép tính
             for(int i = 0 ; i< max;++i){
@@ -80,7 +89,7 @@ public class myBigNumber{
                 
                 a = digit_1 - '0'; //* bước này ta lấy được số a bằng cách lấy kí tự số [0-9] vừa lấy trừ cho kí tự [0] ta sẽ được số tương ứng;
                 b = digit_2 - '0'; //* bước này ta lấy được số b bằng cách lấy kí tự số [0-9] vừa lấy trừ cho kí tự [0] ta sẽ được số tương ứng;
-                
+                //m getdata trong day de lam cai gi, sao t ko thay o dau het
                 first = a + b +temp; // lấy số a + số b + thêm với số dư nếu có;
                 second = a + b;
                 result = (first %10) + result;

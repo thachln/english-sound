@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author User
  */
-public class Caculator extends javax.swing.JDialog {
+public class Caculator extends javax.swing.JFrame implements GetData{
 
     /**
      * Creates new form Caculator
      */
-    public Caculator(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public Caculator() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,18 +60,8 @@ public class Caculator extends javax.swing.JDialog {
         jLabel3.setText("Các em hãy nhập số thứ hai vào đây");
 
         bien_a.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        bien_a.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bien_aActionPerformed(evt);
-            }
-        });
 
         bien_b.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        bien_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bien_bActionPerformed(evt);
-            }
-        });
 
         jTextField3.setEditable(false);
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -80,6 +70,11 @@ public class Caculator extends javax.swing.JDialog {
 
         thuchien.setBackground(new java.awt.Color(0, 0, 255));
         thuchien.setText("THỰC HIỆN PHÉP TÍNH");
+        thuchien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thuchienActionPerformed(evt);
+            }
+        });
 
         lammoi.setBackground(new java.awt.Color(255, 255, 0));
         lammoi.setText("LÀM LẠI");
@@ -91,12 +86,26 @@ public class Caculator extends javax.swing.JDialog {
 
         nhapthemso.setBackground(new java.awt.Color(0, 255, 0));
         nhapthemso.setText("NHẬP THÊM SỐ MỚI");
+        nhapthemso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nhapthemsoActionPerformed(evt);
+            }
+        });
 
         ketqua.setEditable(false);
         ketqua.setColumns(20);
-        ketqua.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        ketqua.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
         ketqua.setRows(5);
         ketqua.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        ketqua.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                ketquaAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(ketqua);
 
         cachthuccong.setEditable(false);
@@ -173,19 +182,71 @@ public class Caculator extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bien_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bien_aActionPerformed
+    private void thuchienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thuchienActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bien_aActionPerformed
-
-    private void bien_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bien_bActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bien_bActionPerformed
+        String pattern = "\\d+";
+        boolean p1;
+        boolean p2;
+        String s1 = bien_a.getText();
+        String s2 = bien_b.getText();
+        p1 = s1.matches(pattern);
+        p2 = s2.matches(pattern);
+        if (!p1) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s1 +" ' "+" có chưa kí tự đặc biệt");
+        }
+        
+        if (!p2) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s2 +" ' "+ " có chưa kí tự đặc biệt");
+        }
+        myBigNumber mybignumber =  new myBigNumber(this);
+        String sum = mybignumber.sum(s1, s2);
+        ketqua.setText(sum);
+    }//GEN-LAST:event_thuchienActionPerformed
 
     private void lammoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lammoiActionPerformed
         // TODO add your handling code here:
+        bien_a.setText("");
+        bien_b.setText("");
+        ketqua.setText("");
+        
+        cachthuccong.setText("");
     }//GEN-LAST:event_lammoiActionPerformed
 
-    /**
+    private void ketquaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ketquaAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ketquaAncestorAdded
+
+    private void nhapthemsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nhapthemsoActionPerformed
+        // TODO add your handling code here:
+        String ab = ketqua.getText();
+        bien_a.setText(ab);
+        bien_b.setText("");
+        String pattern = "\\d+";
+        boolean p1;
+        boolean p2;
+        String s1 = bien_a.getText();
+        String s2 = bien_b.getText();
+        p1 = s1.matches(pattern);
+        p2 = s2.matches(pattern);
+        if (!p1) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s1 +" ' "+" có chưa kí tự đặc biệt");
+        }
+        
+        if (!p2) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s2 +" ' "+ " có chưa kí tự đặc biệt");
+        }
+        myBigNumber mybignumber =  new myBigNumber(this);
+        String sum = mybignumber.sum(s1, s2);
+        ketqua.setText(sum);
+    }//GEN-LAST:event_nhapthemsoActionPerformed
+
+  
+    /**cac cong thuc cong la cai nao dau
+     * cai do la cho in cach thuc cộng ak in buoc 1 buoc 2 cac kieu
+     * nó đó, m dat ten la gi trong day
+     * tao kiem ko ra
+     * 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -201,32 +262,22 @@ public class Caculator extends javax.swing.JDialog {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Caculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Caculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Caculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Caculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
-        /* Create and display the dialog */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                Caculator dialog = new Caculator(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new Caculator().setVisible(true);
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bien_a;
     private javax.swing.JTextField bien_b;
@@ -242,4 +293,21 @@ public class Caculator extends javax.swing.JDialog {
     private javax.swing.JButton nhapthemso;
     private javax.swing.JButton thuchien;
     // End of variables declaration//GEN-END:variables
+
+
+    /**
+     *
+     */
+
+    /**
+     *
+     * @param msg
+     */
+    @Override
+    public void takeandgive(String msg) {
+        cachthuccong.setText(msg);
+    }
+
+
+
 }

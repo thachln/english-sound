@@ -9,3 +9,24 @@ phần mềm gòm 4 thành phần:
 2) GetData.java (interface)
 3) PassThisProject (Testcase)
 4) Caculator.java (GUI)
+
+
+
+Testcase bao gồm 6 trường hợp:
+1) là bình thường.
+2) chuỗi a dài hơn b.
+3) chuỗi b dài hơn a.
+4) chuỗi có ký tự đặc biệt khác [0-9].
+5) chuỗi có số âm.
+Cách chạy testcase:
+-bạn tạo 1 phần tử PassThisProject mới (PassThisProject pass = new PassThisProject();)
+-sau đó tạo 1 phần tử myBigNumber mới và gắn phần tử mới tạo vào. (myBigNumber mybignumber = new myBigNumber(pass);)
+-sau đó bạn tạo 2 số và gọi hàm sum trong myBigNumber để chạy (String sum  = mybignumber.sum("123","456");)
+
+
+hướng dẫn chạy phần mềm:
+1) bạn nhập 2 số a và b nếu thiếu 1 trong 2 số hoặc rơi vào 2 trường hợp chứa số âm và có ký tự đặc biệt 
+thì ứng dụng sẽ thông báo cho người dùng nhập sai và nhập lại.
+2) để thực hiện phép tính nhấn vào nút Thực hiện, kết quả sẽ hiện ra 2 ô phía dưới ô thứ nhất là kết quả 
+ô thứ 2 là các bước của phép tính.
+3) nếu muốn làm mới hoặc thêm số mới để cộng với kết quả thì nhấn vào làm mới hoặc thêm số mới để thực thi.
