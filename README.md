@@ -1,4 +1,3 @@
-# english-sound
-Sound English Dictionary
-
-Please view file "doc\plan\Project_CM-Plan.xlsx" to understand the folder structure.
+﻿#                           __English-Sound__
+###                     Sound English Dictionary
+![](http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern-2/256/dictionary-icon.png)
