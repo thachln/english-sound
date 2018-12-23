@@ -86,6 +86,11 @@ public class Caculator extends javax.swing.JFrame implements GetData{
 
         nhapthemso.setBackground(new java.awt.Color(0, 255, 0));
         nhapthemso.setText("NHẬP THÊM SỐ MỚI");
+        nhapthemso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nhapthemsoActionPerformed(evt);
+            }
+        });
 
         ketqua.setEditable(false);
         ketqua.setColumns(20);
@@ -211,6 +216,30 @@ public class Caculator extends javax.swing.JFrame implements GetData{
     private void ketquaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ketquaAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_ketquaAncestorAdded
+
+    private void nhapthemsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nhapthemsoActionPerformed
+        // TODO add your handling code here:
+        String ab = ketqua.getText();
+        bien_a.setText(ab);
+        bien_b.setText("");
+        String pattern = "\\d+";
+        boolean p1;
+        boolean p2;
+        String s1 = bien_a.getText();
+        String s2 = bien_b.getText();
+        p1 = s1.matches(pattern);
+        p2 = s2.matches(pattern);
+        if (!p1) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s1 +" ' "+" có chưa kí tự đặc biệt");
+        }
+        
+        if (!p2) {
+            JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s2 +" ' "+ " có chưa kí tự đặc biệt");
+        }
+        myBigNumber mybignumber =  new myBigNumber(this);
+        String sum = mybignumber.sum(s1, s2);
+        ketqua.setText(sum);
+    }//GEN-LAST:event_nhapthemsoActionPerformed
 
   
     /**cac cong thuc cong la cai nao dau
