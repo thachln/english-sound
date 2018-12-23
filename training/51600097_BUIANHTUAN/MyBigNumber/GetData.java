@@ -7,7 +7,7 @@
 public interface GetData {
     
     
-    abstract void takeandgive(String data); //* lấy số dư và lưu lại những bước đi;
+    abstract void takeandgive(String msg); //* lấy số dư và lưu lại những bước đi;
             
     
 }
