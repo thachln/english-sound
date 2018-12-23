@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "108629380169",
+    "firebase_url": "https://englishsound-f27ec.firebaseio.com",
+    "project_id": "englishsound-f27ec",
+    "storage_bucket": "englishsound-f27ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108629380169:android:49d29f03588034b9",
+        "android_client_info": {
+          "package_name": "com.example.admin.englishthinh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108629380169-i0dueh9kioo7ai2uns09nshnoh2d3759.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.englishthinh",
+            "certificate_hash": "046accf712e13a4e314d80566ab70808f7f209de"
+          }
+        },
+        {
+          "client_id": "108629380169-egbaa9k0vgkcfnh7td4u5av06me7lpu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY_5j48P9gryWebtX0srQ-8mmbqf__WAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108629380169-egbaa9k0vgkcfnh7td4u5av06me7lpu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

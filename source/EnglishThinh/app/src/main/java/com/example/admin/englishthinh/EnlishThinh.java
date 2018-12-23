@@ -106,4 +106,7 @@ public class EnlishThinh extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
