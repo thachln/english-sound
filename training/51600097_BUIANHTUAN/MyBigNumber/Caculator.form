@@ -144,9 +144,6 @@
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bien_aActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="bien_b">
       <Properties>
@@ -154,9 +151,6 @@
           <Font name="Times New Roman" size="18" style="0"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bien_bActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField3">
       <Properties>
@@ -175,6 +169,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="TH&#x1ef0;C HI&#x1ec6;N PH&#xc9;P T&#xcd;NH"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thuchienActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="lammoi">
       <Properties>
@@ -207,13 +204,16 @@
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monospaced" size="18" style="0"/>
+              <Font name="Monospaced" size="24" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Text Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="ketquaAncestorAdded"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
