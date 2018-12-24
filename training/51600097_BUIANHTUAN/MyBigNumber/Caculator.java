@@ -199,7 +199,7 @@ public class Caculator extends javax.swing.JFrame implements GetData{
         if (!p2) {
             JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s2 +" ' "+ " có chưa kí tự đặc biệt");
         }
-        myBigNumber mybignumber =  new myBigNumber(this);
+        MyBigNumber mybignumber =  new MyBigNumber(this);
         String sum = mybignumber.sum(s1, s2);
         ketqua.setText(sum);
     }//GEN-LAST:event_thuchienActionPerformed
@@ -236,7 +236,7 @@ public class Caculator extends javax.swing.JFrame implements GetData{
         if (!p2) {
             JOptionPane.showMessageDialog(rootPane,"Trong chuỗi số " +" ' "+ s2 +" ' "+ " có chưa kí tự đặc biệt");
         }
-        myBigNumber mybignumber =  new myBigNumber(this);
+        MyBigNumber mybignumber =  new MyBigNumber(this);
         String sum = mybignumber.sum(s1, s2);
         ketqua.setText(sum);
     }//GEN-LAST:event_nhapthemsoActionPerformed
