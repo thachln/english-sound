@@ -35,3 +35,11 @@ thì ứng dụng sẽ thông báo cho người dùng nhập sai và nhập lạ
 2) để thực hiện phép tính nhấn vào nút Thực hiện, kết quả sẽ hiện ra 2 ô phía dưới ô thứ nhất là kết quả 
 ô thứ 2 là các bước của phép tính.
 3) nếu muốn làm mới hoặc thêm số mới để cộng với kết quả thì nhấn vào làm mới hoặc thêm số mới để thực thi.
+
+
+các thành phần trong Hàm MyBigNumber.java
+
+final là số cố định ko thể thay đổi dc nên dù có set thế nào cũng ko thể thay đổi số có trị giá final
+trong file có 2 đoạn code bị lỗi đó là 2 đoạn code dùng để xét trường hợp không nhập gì thì sẽ mặc định là 0.
+nhưng do khi check myWorkSpace thì khuyến khích dùng final nên hai câu lệnh đó bị lỗi do s1 va s2 đã thành final.
+
