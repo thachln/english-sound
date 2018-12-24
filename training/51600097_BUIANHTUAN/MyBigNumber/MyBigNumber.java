@@ -89,7 +89,7 @@ public class MyBigNumber{
                 
                 a = digit_1 - '0'; //* bước này ta lấy được số a bằng cách lấy kí tự số [0-9] vừa lấy trừ cho kí tự [0] ta sẽ được số tương ứng;
                 b = digit_2 - '0'; //* bước này ta lấy được số b bằng cách lấy kí tự số [0-9] vừa lấy trừ cho kí tự [0] ta sẽ được số tương ứng;
-                //m getdata trong day de lam cai gi, sao t ko thay o dau het
+                
                 first = a + b +temp; // lấy số a + số b + thêm với số dư nếu có;
                 second = a + b;
                 result = (first %10) + result;
