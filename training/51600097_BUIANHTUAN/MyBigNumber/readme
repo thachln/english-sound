@@ -2,7 +2,12 @@
 Đây là phần mềm cộng 2 số dành cho lứa tuổi hồn nhiên lớp 3
 Với cách thức sử dụng đơn giản và tiện lợi các em nhỏ có thể tìm ra được cách thức để cộng 2 số a và b.
 Phần mềm còn cho phép phát hiện lỗi.
-
+/**
+ * Tác giả:  Bùi Anh Tuấn.
+ * DesCription.
+ * MyBigNumber.java là lớp dùng để cộng 2 số và được sử dụng cho học sinh lớp 3.
+ * Hàm sum là hàm để thực hiện phép tính này.
+*/
 
 phần mềm gòm 4 thành phần:
 1) MyBigNumber.java (code)
