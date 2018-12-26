@@ -14,12 +14,13 @@ https://drive.google.com/file/d/1-f3yOP7xnpsFtAWYdRI0YF1YDMNXUxdO/view?usp=shari
 https://drive.google.com/file/d/1l4q7Ahp-T3zAp81RJ4znD47Snm2fpScI/view?usp=sharing (code)
 
 
-phần mềm gòm 4 thành phần:
+phần mềm gòm 6 thành phần:
 1) MyBigNumber.java (code)
 2) GetData.java (interface)
 3) PassThisProject (Testcase)
 4) Caculator.java (GUI)
-
+5) TryToPass.jar (phần mềm)
+6) MyBigNumber.cmd (chạy phần mềm cho 1 số máy)
 
 
 Testcase bao gồm 6 trường hợp:
