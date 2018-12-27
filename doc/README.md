@@ -2,7 +2,7 @@
 ##                     Sound English Dictionary
 ![](http://www.hccfindiana.org/wp-content/uploads/2012/03/dictionary-project-logo-160510.png)
 ## Project gồm 12 part
-1. Folder checklist: Lưu kết quả review các sản phẩm theo check list và lưu lượng công việc của nhóm đã làm
+1. Folder checklist: Lưu kết quả review các sản phẩm theo check list và task(công việc của các thành viên trong nhóm)
 2. Folder customer-supplied: Lưu tài liệu khách hàng cung cấp
 3. Folder design: Lưu tài liệu thiết kế của dự án
 4. Folder guideline: Lưu tài liệu hướng dẫn của dự án
