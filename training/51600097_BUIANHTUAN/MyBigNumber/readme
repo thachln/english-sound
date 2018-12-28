@@ -9,12 +9,18 @@ Phần mềm còn cho phép phát hiện lỗi.
  * Hàm sum là hàm để thực hiện phép tính này.
 */
 
-phần mềm gòm 4 thành phần:
+Đây là links tải full phần mềm:
+https://drive.google.com/file/d/1-f3yOP7xnpsFtAWYdRI0YF1YDMNXUxdO/view?usp=sharing (Jar)
+https://drive.google.com/file/d/1l4q7Ahp-T3zAp81RJ4znD47Snm2fpScI/view?usp=sharing (code)
+
+
+phần mềm gòm 6 thành phần:
 1) MyBigNumber.java (code)
 2) GetData.java (interface)
 3) PassThisProject (Testcase)
 4) Caculator.java (GUI)
-
+5) TryToPass.jar (phần mềm)
+6) MyBigNumber.cmd (chạy phần mềm cho 1 số máy)
 
 
 Testcase bao gồm 6 trường hợp:
@@ -42,4 +48,5 @@ các thành phần trong Hàm MyBigNumber.java
 final là số cố định ko thể thay đổi dc nên dù có set thế nào cũng ko thể thay đổi số có trị giá final
 trong file có 2 đoạn code bị lỗi đó là 2 đoạn code dùng để xét trường hợp không nhập gì thì sẽ mặc định là 0.
 nhưng do khi check myWorkSpace thì khuyến khích dùng final nên hai câu lệnh đó bị lỗi do s1 va s2 đã thành final.
+
 
