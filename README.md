@@ -15,5 +15,6 @@
 4. Folder tranning bao gồm tất cả program cộng 2 số build cho học sinh lớp 3 của mỗi người trong team.
 
 ## Link download app
+https://drive.google.com/file/d/1DJ62pjiiagmQI8jjl_1jk4YXWsXBmoCe/view?fbclid=IwAR3pku9u_09PFjopOY2GCcXlT17CSDSJSumcTKasbCjZeZpkfL64Tfm20pA
 
 ## Thank for read
